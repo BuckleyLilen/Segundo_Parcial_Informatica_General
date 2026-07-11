@@ -66,65 +66,19 @@ body::before{
 
 /* mantiene la página por encima de la capa */
 
-.contenedor{
-
-    position:relative;
-
-
-}
-
-
 .banner{
 
     background-image:url("../img/anderson.jpg");
 
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-
-    height:22rem;
+   background-size:cover;
+background-position:center 15%;
+height:26rem;
 
 
     display:flex;
 
     flex-direction:column;
 
-    justify-content:center;
-
-    align-items:center;
-
-
-    text-align:center;
-
-
-    position:relative;
-
-    overflow:hidden;
-
-
-    border:1px solid #555;
-
-}
-.banner{
-
-    background-image:url("../img/anderson.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-
-    height:22rem;
-
-
-    display:flex;
-
-    flex-direction:column;
 
     justify-content:center;
 
@@ -146,37 +100,60 @@ body::before{
 
 }
 
-/* texto encima */
+
+
+.banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:rgba(122, 122, 122, 0.45);
+
+}
+
+
 
 .banner h1,
 .banner p{
 
     position:relative;
 
+    z-index:1;
 
 }
+
 
 
 .banner h1{
 
     font-family:"Abel",sans-serif;
 
+
     font-size:4rem;
 
+
     letter-spacing:.4rem;
+
 
     text-transform:uppercase;
 
 }
 
 
+
 .banner .subtitulo{
 
     font-family:"Abel",sans-serif;
 
+
     font-size:1.5rem;
 
 }
+
 
 /*=========================================
  MENU
