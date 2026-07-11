@@ -33,7 +33,7 @@ let texto = document.querySelector("#dato");
 let imagen = document.querySelector("#andersonimagen");
 
 
-// Evento del botón
+// Evento del botón. Al presionarlo, se dan datos aleatorios
 
 boton.addEventListener("click", function(){
 
