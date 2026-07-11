@@ -1,4 +1,4 @@
-// Obras de Laurie Anderson
+// Obras de Laurie Anderson (declaro el array)
 
 let obras = [
 
@@ -53,43 +53,29 @@ let obras = [
 ];
 
 
-// Seleccionar elementos
+// Seleccionar elementos (declaro los id)
 
 let galeria = document.querySelector("#galeria");
 
 let boton = document.querySelector("#btnDiseno");
 
 
-// Crear galería
+// Crear galería (declaro la funcion)
 
-function mostrarObras(){
+function mostrarObras() {
 
-    galeria.innerHTML = "";
+    galeria.innerHTML = ""; //(vacía y evita que se duplique)
 
+    obras.forEach(function(obra) { //(recorre el array)
 
-    obras.forEach(function(obra){
-
-
-        let tarjeta = document.createElement("article");
-
-
-        tarjeta.classList.add("obra");
-
-
-        tarjeta.innerHTML = `
-
-            <img src="${obra.imagen}" alt="${obra.titulo}">
-
-            <h3>${obra.titulo}</h3>
-
-            <p>${obra.descripcion}</p>
-
+        galeria.innerHTML += ` 
+            <article class="obra">
+                <img src="${obra.imagen}" alt="${obra.titulo}">
+                <h3>${obra.titulo}</h3>
+                <p>${obra.descripcion}</p>
+            </article>
         `;
-
-
-        galeria.appendChild(tarjeta);
-
-
+//(genera contenedor de bloque) (tarjeta article, clase obra) 
     });
 
 }
@@ -102,13 +88,13 @@ mostrarObras();
 
 // Cambiar diseño
 
-let diseñoAlternativo = false;
+let diseñoAlternativo = false; //(declara variable booleana)
 
 
-boton.addEventListener("click", function(){
+boton.addEventListener("click", function(){ //(declaro el evento)
 
 
-    diseñoAlternativo = !diseñoAlternativo;
+    diseñoAlternativo = !diseñoAlternativo; //(true o false)
 
 
     if(diseñoAlternativo){

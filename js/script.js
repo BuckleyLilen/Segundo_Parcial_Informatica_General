@@ -1,4 +1,4 @@
-// Datos curiosos sobre Laurie Anderson
+// Datos curiosos sobre Laurie Anderson (declarar datos del array)
 let datos = [
 
     {
@@ -24,7 +24,7 @@ let datos = [
 ];
 
 
-// Seleccionar elementos
+// Seleccionar elementos (declarar variables)
 
 let boton = document.querySelector("#nuevoDato");
 
@@ -33,15 +33,15 @@ let texto = document.querySelector("#dato");
 let imagen = document.querySelector("#andersonimagen");
 
 
-// Evento del botón. Al presionarlo, se dan datos aleatorios
+// Evento del botón. Al presionarlo, se dan datos aleatorios (suscripcion al evento)
 
 boton.addEventListener("click", function(){
 
-  let numero = Math.floor(Math.random() * datos.length);
+  let numero = Math.floor(Math.random() * datos.length); // (declaro num)
 
-let datoActual = datos[numero];
+let datoActual = datos[numero]; //(actualizo el dato con el resultado)
 
-texto.textContent = datoActual.texto;
+texto.textContent = datoActual.texto; //(actualiza accediendo al id)
 
 imagen.src = datoActual.imagen;
 });
